@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 02 - Aula 06</title>
+    <title>Exercicio 03 - Aula 06</title>
     <style>
         body {
             background-color: black ;
@@ -20,9 +20,12 @@
     <h1>Tratamentos de Dados</h1>  
     <p>Trabalhando com variaveis</p>
     <script>
-        var n1 = window.prompt('Digite um valor :');
-        var n2 = window.prompt('Digite outro valor :');
-        window.alert('Os valores digitados sao ' + n1 + ' e ' + n2);
+        var n1 = Number.parseInt(window.prompt('Digite um valor :'));//parseInt conversao de string para numero inteiro
+        var n2 = Number.parseFloat(window.prompt('Digite outro valor :'));//parseFloat conversao de string para numero real
+        var s = n1 + n2
+        window.alert(`A soma dos valores ${n1} e ${n2} é ${s}`);//concatenação
+        //(number + number)para adiçao 
+        //(string + string)para concatenação
     </script>
 </pre>        
 </body>

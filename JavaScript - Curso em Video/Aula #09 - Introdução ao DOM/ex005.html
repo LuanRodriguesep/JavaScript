@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio #05 - Aula 09</title>
+    <style>
+        body{
+            background: rgb(0, 0, 0);
+            color:white;
+            font: normal 18pt arial;
+        }
+        h1{
+            color:rgb(102, 7, 139);
+        }
+    </style>
+    <h1>Iniciando Estudos com DOM</h1>
+    <p> Aqui vai o resultado </p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em javaScript</p>
+    <div id= "msg">Clique em mim</div>
+</head>
+<body>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('Está escrito assim : ' + p1.innerText) /* para escrever em um determinada tag.
+         o colchetes indica a ordem se iniciando do zero como a primeira*/
+         
+       /* var d = window.document.getElementById("msg")
+        d.style.background = "red"
+        d.innerText = "Estou aguardando ..."*/
+
+        var d = window.document.querySelector('div#msg')/* comando usado com navegadores mais atualizados.
+         obs>>> com pontinho quando for class (div.msg) / ser for por id será usado a cerquilha (div#msg)*/
+        
+         d.style.background = 'blue' // para mudar o fundo da div
+
+
+    </script>
+
+    
+</body>
+</html>
