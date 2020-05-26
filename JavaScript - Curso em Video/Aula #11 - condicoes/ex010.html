@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10 - Calcular Multas</title>
+    <style>
+        body{
+            background: black;
+            color: white;
+            font:normal 14pt arial;
+        }
+        h1{
+            color: rgb(77, 3, 77);
+        }
+        div#res{
+            background: rgb(126, 126, 223);
+            padding-top: 40px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do Carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()"> <br><br>
+    <div id="res">
+
+    </div>
+    <script>
+        //window.alert(' ATENÇÃO ! SUJEITO A MULTAS ')
+        function calcular(){
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.getElementById('res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velociade atual é de <strong>${vel} km/h</strong></p>`
+
+            if (vel<70){
+                window.document.write(`Dirija com cuidado curvas acentuadas !!!`)
+            }else{
+                window.document.write(`Sua velocidade é de ${vel} km/h, está muito acima do permitido. MULTADO!`)
+            }
+        }
+    </script>   
+</body>
+</html>
